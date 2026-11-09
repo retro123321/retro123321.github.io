@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Retro Invaders</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light dark;
+    --sky: #1b1740;
+    --panel: #241f52;
+    --text: #f2eefc;
+    --muted: #b7b0d9;
+    --gold: #ffd633;
+    --link: #6fe3ff;
+    --rule: rgba(183, 176, 217, 0.25);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --sky: #ece9fb;
+      --panel: #ffffff;
+      --text: #1d1940;
+      --muted: #545079;
+      --gold: #8a5a00;
+      --link: #1d5fa8;
+      --rule: rgba(29, 25, 64, 0.15);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--sky);
+    color: var(--text);
+    font: 1.06rem/1.65 "Atkinson Hyperlegible", "Segoe UI", Arial, sans-serif;
+  }
+  .page { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  header { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 2rem; }
+  /* An 11 x 8 pixel invader, drawn with box-shadows (one 6px "pixel" each). */
+  .invader {
+    flex: none; width: 6px; height: 6px; margin: 0 60px 42px 0;
+    color: var(--gold);
+    box-shadow:
+      12px 0, 48px 0,
+      18px 6px, 42px 6px,
+      12px 12px, 18px 12px, 24px 12px, 30px 12px, 36px 12px, 42px 12px, 48px 12px,
+      6px 18px, 12px 18px, 24px 18px, 30px 18px, 36px 18px, 48px 18px, 54px 18px,
+      0 24px, 6px 24px, 12px 24px, 18px 24px, 24px 24px, 30px 24px, 36px 24px, 42px 24px, 48px 24px, 54px 24px, 60px 24px,
+      0 30px, 12px 30px, 18px 30px, 24px 30px, 30px 30px, 36px 30px, 42px 30px, 48px 30px, 60px 30px,
+      0 36px, 12px 36px, 48px 36px, 60px 36px,
+      18px 42px, 24px 42px, 36px 42px, 42px 42px;
+  }
+  h1 {
+    margin: 0;
+    font: 400 clamp(1.1rem, 4vw, 1.6rem)/1.4 "Press Start 2P", "Courier New", monospace;
+    color: var(--gold);
+  }
+  .byline { margin: 0.35rem 0 0; color: var(--muted); }
+  main { background: var(--panel); border-radius: 6px; padding: 1.75rem 1.5rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 0.5rem; }
+  main > h2:first-child { margin-top: 0; }
+  p, ul { margin: 0 0 1rem; }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .updated { color: var(--muted); font-size: 0.95rem; }
+  footer { margin-top: 2rem; color: var(--muted); font-size: 0.95rem; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="invader" aria-hidden="true"></div>
+  <div>
+    <h1>Retro Invaders</h1>
+    <p class="byline">A retro arcade shooter by retro123321</p>
+  </div>
+</header>
+<main>
+  <h2>Hold the line</h2>
+  <p>Retro Invaders is an arcade shooter in the spirit of the classics. Choose your difficulty, survive growing waves of invaders, grab power-ups and take down a boss every fifth wave.</p>
+
+  <h2>Support</h2>
+  <p>Found a bug, have feedback or need help? Email <a href="mailto:ac261996@gmail.com">ac261996@gmail.com</a> and include your device and what happened.</p>
+
+  <h2>Privacy</h2>
+  <p>Read the <a href="privacy.html">privacy policy</a> to see what information is involved when you play, including how ads work on phones and tablets.</p>
+</main>
+<footer>&copy; 2026 retro123321</footer>
+</div>
+</body>
+</html>
